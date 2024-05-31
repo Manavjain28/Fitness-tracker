@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Fitness Tracker</h1>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Fitness Tracker</h1>
+            <form id="activity-form">
+                <label for="activity">Activity:</label>
+                <input type="text" id="activity" required>
+                <label for="duration">Duration (minutes):</label>
+                <input type="number" id="duration" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                <label for="image">Select Activity Image:</label>
+                <select id="image">
+                    <option value="running.jpg">Running</option>
+                    <option value="cycling.jpg">Cycling</option>
+                    <option value="swimming.jpg">Swimming</option>
+                </select>
+                <button type="submit">Track Activity</button>
+            </form>
+        </div>
+        <div class="right-panel">
+            <div id="stats">
+                <h2>Your Statistics</h2>
+                <div class="statistic">
+                    <div class="label">Total Duration:</div>
+                    <div class="value" id="total-duration">0 minutes</div>
+                </div>
+                <div class="statistic">
+                    <div class="label">Average Duration:</div>
+                    <div class="value" id="average-duration">0 minutes</div>
+                </div>
+                <div class="statistic">
+                    <div class="label">Total Activities:</div>
+                    <div class="value" id="total-activities">0</div>
+                </div>
+                <div class="statistic">
+                    <div class="label">Most Common Activity:</div>
+                    <div class="value" id="most-common-activity">-</div>
+                </div>
+            </div>
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
